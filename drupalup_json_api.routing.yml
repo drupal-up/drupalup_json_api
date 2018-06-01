@@ -1,0 +1,8 @@
+drupalup_json_api.json_api:
+  path: '/api/json'
+  defaults:
+    _controller: 'Drupal\drupalup_json_api\Controller\JsonApiController::renderApi'
+    _title: 'JSON api'
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
