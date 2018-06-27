@@ -3,21 +3,19 @@
 namespace Drupal\drupalup_json_api\Controller;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
-use Drupal\Core\Controller\ControllerBase;
 
 /**
- * Implementing the store locator API.
+ * Implementing our example JSON api.
  */
-class JsonApiController extends ControllerBase {
+class JsonApiController {
 
   /**
    * Callback for the API.
    */
-  public function renderApi(Request $request) {
+  public function renderApi() {
 
     return new JsonResponse(
-      'data' => $this->getResults($request),
+      'data' => $this->getResults(),
       'method' => 'GET',
     );
   }
@@ -35,7 +33,7 @@ class JsonApiController extends ControllerBase {
       [
         "name" => "The Godfather",
         "year" => 1972,
-        "duration" => ,
+        "duration" => '',
       ],
       [
         "name" => "The Dark Knight",
@@ -45,17 +43,17 @@ class JsonApiController extends ControllerBase {
       [
         "name" => "The Godfather: Part II",
         "year" => 1974,
-        "duration" => ,
+        "duration" => '',
       ],
       [
         "name" => "Pulp Fiction",
         "year" => 1994,
-        "duration" => ,
+        "duration" => '',
       ],
       [
         "name" => "The Lord of the Rings: The Return of the King",
         "year" => 2003,
-        "duration" => ,
+        "duration" => '',
       ],
     ];
   }
