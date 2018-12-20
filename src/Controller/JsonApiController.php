@@ -14,10 +14,10 @@ class JsonApiController {
    */
   public function renderApi() {
 
-    return new JsonResponse(
+    return new JsonResponse([
       'data' => $this->getResults(),
       'method' => 'GET',
-    );
+    ]);
   }
 
   /**
